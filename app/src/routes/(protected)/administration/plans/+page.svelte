@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { Button } from "flowbite-svelte";
     import GlasBox from "$lib/components/GlasBox.svelte";
     import PaginationTable from "$lib/components/PaginationTable.svelte";
     import { formatCurrency } from "$lib/utils/currency";
@@ -47,6 +48,9 @@
     };
 </script>
 
+<div class="mb-6 flex justify-end">
+    <Button href="/administration/plans/create">Add Membership Plan</Button>
+</div>
 <GlasBox full>
     <PaginationTable data={planData} {renderValue} />
 </GlasBox>
