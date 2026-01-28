@@ -25,32 +25,35 @@ export const nodes = [
 	() => import('./nodes/21'),
 	() => import('./nodes/22'),
 	() => import('./nodes/23'),
-	() => import('./nodes/24')
+	() => import('./nodes/24'),
+	() => import('./nodes/25'),
+	() => import('./nodes/26')
 ];
 
-export const server_loads = [0,2];
+export const server_loads = [0,2,4];
 
 export const dictionary = {
-		"/": [~5],
-		"/(protected)/administration": [6,[2,3]],
-		"/(protected)/administration/calendar": [~7,[2,3]],
-		"/(protected)/administration/hours": [~8,[2,3]],
-		"/(protected)/administration/members": [~9,[2,3]],
-		"/(protected)/administration/plans": [~10,[2,3]],
-		"/(protected)/administration/prices": [11,[2,3]],
-		"/(protected)/administration/residents": [~12,[2,3]],
-		"/adoption-info": [14],
-		"/auth": [~15],
-		"/auth/forgot-password": [~16],
-		"/auth/register": [17],
-		"/calendar": [~18],
-		"/cats": [~19],
-		"/checkout": [20],
-		"/coffee": [21],
-		"/docs": [22],
-		"/(protected)/member": [13,[2,4]],
-		"/plans": [23],
-		"/rules": [24]
+		"/": [~6],
+		"/(protected)/administration": [7,[2,3]],
+		"/(protected)/administration/calendar": [~8,[2,3]],
+		"/(protected)/administration/hours": [~9,[2,3]],
+		"/(protected)/administration/members": [~10,[2,3]],
+		"/(protected)/administration/plans": [11,[2,3,4]],
+		"/(protected)/administration/plans/[id]": [12,[2,3,4]],
+		"/(protected)/administration/prices": [13,[2,3]],
+		"/(protected)/administration/residents": [~14,[2,3]],
+		"/adoption-info": [16],
+		"/auth": [~17],
+		"/auth/forgot-password": [~18],
+		"/auth/register": [19],
+		"/calendar": [~20],
+		"/cats": [~21],
+		"/checkout": [22],
+		"/coffee": [23],
+		"/docs": [24],
+		"/(protected)/member": [15,[2,5]],
+		"/plans": [25],
+		"/rules": [26]
 	};
 
 export const hooks = {

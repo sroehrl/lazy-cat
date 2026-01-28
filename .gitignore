@@ -6,3 +6,4 @@ app/.env.development
 app/.env.production
 app/node_modules
 app/build
+app/.svelte-kit
