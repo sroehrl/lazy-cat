@@ -129,15 +129,9 @@
     <ReusableModal />
 </div>
 
-<Footer
-    class="bg-black text-white dark:bg-neutral-900 {$page.url.pathname.startsWith(
-        '/member',
-    )
-        ? 'hidden md:block'
-        : ''}"
->
+<Footer class="bg-black text-white dark:bg-neutral-900">
     <div class="py-5 px-4 grid gap-3 md:grid-cols-3 items-center">
-        <div class="flex gap-3 place-self-center">
+        <div class="gap-3 place-self-center hidden md:flex">
             <Button
                 pill
                 class="!p-2"
@@ -165,7 +159,7 @@
                     ><PhoneOutline class="w-3" /> 585.425.4202</a
                 >
             </p>
-            <p>
+            <p class="hidden md:block">
                 <a
                     class="text-primary-600 flex gap-1"
                     href="mailto:lazycatloungeandcafe@gmail.com"
