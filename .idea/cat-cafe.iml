@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/api/commands" isTestSource="false" packagePrefix="Commands\" />
+      <sourceFolder url="file://$MODULE_DIR$/api/config" isTestSource="false" packagePrefix="Config\" />
+      <sourceFolder url="file://$MODULE_DIR$/api/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/firebase/php-jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/justinrainbow/json-schema" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/neoan.io/core" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/neoan.io/legacy-db-adapter" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/neoan3-apps/db" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/neoan3-apps/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/neoan3-apps/stateless" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/neoan3-apps/template" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/seld/jsonlint" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/seld/signal-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/apimatic/core" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/apimatic/core-interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/apimatic/jsonmapper" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/apimatic/unirest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/paypal/paypal-server-sdk" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/php-jsonpointer/php-jsonpointer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

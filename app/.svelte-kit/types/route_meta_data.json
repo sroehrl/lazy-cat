@@ -1,0 +1,74 @@
+{
+	"/(protected)": [
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/": [
+		"src/routes/+page.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/administration": [
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/administration/calendar": [
+		"src/routes/(protected)/administration/calendar/+page.server.ts",
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/administration/hours": [
+		"src/routes/(protected)/administration/hours/+page.server.ts",
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/administration/members": [
+		"src/routes/(protected)/administration/members/+page.server.ts",
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/administration/plans": [
+		"src/routes/(protected)/administration/plans/+page.server.ts",
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/administration/prices": [
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/auth": [
+		"src/routes/auth/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/auth/forgot-password": [
+		"src/routes/auth/forgot-password/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/auth/register": [
+		"src/routes/+layout.server.ts"
+	],
+	"/calendar": [
+		"src/routes/calendar/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/checkout": [
+		"src/routes/+layout.server.ts"
+	],
+	"/coffee": [
+		"src/routes/+layout.server.ts"
+	],
+	"/docs": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(protected)/member": [
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/plans": [
+		"src/routes/+layout.server.ts"
+	]
+}

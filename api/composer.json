@@ -1,0 +1,26 @@
+{
+  "name": "neoan.io/rest-api-starter-project",
+  "description": "Basic neoan.io Lenkrad starter kit with authentication",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Stefan Roehrl",
+      "email": "neoan@neoan.us"
+    }
+  ],
+  "require": {
+    "neoan.io/core": "^0",
+    "neoan.io/legacy-db-adapter": "1.*",
+    "neoan3-apps/stateless": "^2.0",
+    "paypal/paypal-server-sdk": "1.1.0",
+    "mailjet/mailjet-apiv3-php": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Config\\": "config/",
+      "Commands\\": "commands/"
+    }
+  }
+}

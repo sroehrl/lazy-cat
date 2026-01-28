@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/api/vendor/neoan.io/legacy-db-adapter" />
+      <path value="$PROJECT_DIR$/api/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/api/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/api/vendor/neoan.io/core" />
+      <path value="$PROJECT_DIR$/api/vendor/neoan3-apps/stateless" />
+      <path value="$PROJECT_DIR$/api/vendor/neoan3-apps/template" />
+      <path value="$PROJECT_DIR$/api/vendor/neoan3-apps/db" />
+      <path value="$PROJECT_DIR$/api/vendor/neoan3-apps/jwt" />
+      <path value="$PROJECT_DIR$/api/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/api/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/api/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/api/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/api/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/api/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/api/vendor/seld/signal-handler" />
+      <path value="$PROJECT_DIR$/api/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/api/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/api/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/api/vendor/composer" />
+      <path value="$PROJECT_DIR$/api/vendor/paypal/paypal-server-sdk" />
+      <path value="$PROJECT_DIR$/api/vendor/php-jsonpointer/php-jsonpointer" />
+      <path value="$PROJECT_DIR$/api/vendor/apimatic/core-interfaces" />
+      <path value="$PROJECT_DIR$/api/vendor/apimatic/core" />
+      <path value="$PROJECT_DIR$/api/vendor/apimatic/unirest-php" />
+      <path value="$PROJECT_DIR$/api/vendor/apimatic/jsonmapper" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/api/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>
