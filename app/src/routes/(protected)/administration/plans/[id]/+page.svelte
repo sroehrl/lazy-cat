@@ -15,9 +15,7 @@
     import { ChevronLeftOutline, TrashBinOutline } from "flowbite-svelte-icons";
 
     export let data;
-    let plan = data.plans.find(
-        (plan: any) => plan.id === Number(data.params.id),
-    );
+    let plan = data.plans.find((plan: any) => plan.id === Number(data.id));
 
     let name = plan?.name || "";
     let description = plan?.description || "";

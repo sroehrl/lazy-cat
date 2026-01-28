@@ -6,7 +6,7 @@ export const load = async ({ cookies, params }) => {
     const allPlans = await api.get('/plans?pageSize=100&orderBy=pricePerMonth')
     await paypalApi.auth()
     return {
-        params,
+        id: params?.id || null,
         plans: allPlans.collection,
         paypalPlans: await paypalApi.get('/billing/plans')
     }
