@@ -2,6 +2,7 @@
 
 namespace App\Resident\Models;
 
+use Neoan\Model\Transformers\LockedTimeIn;
 use Neoan\Model\Attributes\IsPrimaryKey;
 use Neoan\Model\Attributes\Type;
 use Neoan\Model\Model;
@@ -16,10 +17,10 @@ class Resident extends Model
 
     public string $name;
     public string $gender;
-    public ?string $breed;
-    public ?string $color;
+    public ?string $breed = null;
+    public ?string $color = null;
     public string $description;
-    #[Type('text')]
+    #[Type('longtext')]
     public ?string $image;
     public string $status = 'available';
 

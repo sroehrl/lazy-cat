@@ -12,6 +12,6 @@ class GetResidents implements Routable
 {
     public function __invoke(): Collection
     {
-        return Resident::retrieve(['^deletedAt', 'status' => '!adopted'])
+        return Resident::retrieve(['^deletedAt', 'status' => '!adopted']);
     }
 }

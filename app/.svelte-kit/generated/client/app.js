@@ -35,7 +35,7 @@ export const dictionary = {
 		"/(protected)/administration/members": [~9,[2,3]],
 		"/(protected)/administration/plans": [~10,[2,3]],
 		"/(protected)/administration/prices": [11,[2,3]],
-		"/(protected)/administration/residents": [12,[2,3]],
+		"/(protected)/administration/residents": [~12,[2,3]],
 		"/auth": [~14],
 		"/auth/forgot-password": [~15],
 		"/auth/register": [16],

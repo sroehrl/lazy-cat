@@ -39,6 +39,7 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/(protected)/administration/residents": [
+		"src/routes/(protected)/administration/residents/+page.server.ts",
 		"src/routes/(protected)/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
