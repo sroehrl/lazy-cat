@@ -38,6 +38,10 @@
 		"src/routes/(protected)/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/(protected)/administration/residents": [
+		"src/routes/(protected)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
 	"/auth": [
 		"src/routes/auth/+page.server.ts",
 		"src/routes/+layout.server.ts"
