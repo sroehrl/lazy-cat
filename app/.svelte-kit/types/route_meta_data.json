@@ -58,6 +58,10 @@
 		"src/routes/calendar/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/cats": [
+		"src/routes/cats/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
 	"/checkout": [
 		"src/routes/+layout.server.ts"
 	],
