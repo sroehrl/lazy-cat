@@ -5,7 +5,6 @@ namespace App\Auth\Routes;
 use App\Auth\Requests\LoginRequest;
 use App\Auth\Support\GenerateJWT;
 use App\User\Models\User;
-use Neoan\Request\Request;
 use Neoan\Routing\Attributes\Post;
 use Neoan\Routing\Interfaces\Routable;
 
