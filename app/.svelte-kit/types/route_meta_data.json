@@ -43,6 +43,9 @@
 		"src/routes/(protected)/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/adoption-info": [
+		"src/routes/+layout.server.ts"
+	],
 	"/auth": [
 		"src/routes/auth/+page.server.ts",
 		"src/routes/+layout.server.ts"
@@ -78,6 +81,9 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/plans": [
+		"src/routes/+layout.server.ts"
+	],
+	"/rules": [
 		"src/routes/+layout.server.ts"
 	]
 }

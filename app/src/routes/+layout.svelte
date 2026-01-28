@@ -73,8 +73,9 @@
         >
         <Dropdown class="w-44 z-20">
             <DropdownItem href="/cats">Our current "residents"</DropdownItem>
-            <DropdownItem href="/cats">How adoption works</DropdownItem>
-            <DropdownItem href="/cats">Rules & Etiquette</DropdownItem>
+            <DropdownItem href="/adoption-info">How adoption works</DropdownItem
+            >
+            <DropdownItem href="/rules">Rules & Etiquette</DropdownItem>
         </Dropdown>
         <NavLi class="text-2xl" href="{base}/calendar">Book Lounge Visits</NavLi
         >

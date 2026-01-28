@@ -13,7 +13,7 @@ type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends 
 export type Snapshot<T = any> = Kit.Snapshot<T>;
 type PageServerParentData = EnsureDefined<LayoutServerData>;
 type PageParentData = EnsureDefined<LayoutData>;
-type LayoutRouteId = RouteId | "/" | "/(protected)/administration" | "/(protected)/administration/calendar" | "/(protected)/administration/hours" | "/(protected)/administration/members" | "/(protected)/administration/plans" | "/(protected)/administration/prices" | "/(protected)/administration/residents" | "/(protected)/member" | "/auth" | "/auth/forgot-password" | "/auth/register" | "/calendar" | "/cats" | "/checkout" | "/coffee" | "/docs" | "/plans" | null
+type LayoutRouteId = RouteId | "/" | "/(protected)/administration" | "/(protected)/administration/calendar" | "/(protected)/administration/hours" | "/(protected)/administration/members" | "/(protected)/administration/plans" | "/(protected)/administration/prices" | "/(protected)/administration/residents" | "/(protected)/member" | "/adoption-info" | "/auth" | "/auth/forgot-password" | "/auth/register" | "/calendar" | "/cats" | "/checkout" | "/coffee" | "/docs" | "/plans" | "/rules" | null
 type LayoutParams = RouteParams & {  }
 type LayoutServerParentData = EnsureDefined<{}>;
 type LayoutParentData = EnsureDefined<{}>;
