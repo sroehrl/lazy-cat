@@ -19,11 +19,13 @@
         appliesWeekends: x.weekends,
         guest: x.guest,
         pawsPerMonth: x.pawsPerMonth,
-        paypalSync: paypalPlans.plans.find(
-            (y) =>
-                y.status === "ACTIVE" &&
-                y.product_id === "cc-sub-" + x.id + "-" + x.createdAt.stamp,
-        ),
+        paypalSync:
+            paypalPlans.plans.find(
+                (y) =>
+                    y.status === "ACTIVE" &&
+                    y.product_id ===
+                        "cc-prod-" + x.id + "-" + x.createdAt.stamp,
+            )?.id || null,
         created: x.createdAt,
         updated: x.updatedAt,
         action: x.id,

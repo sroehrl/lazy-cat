@@ -24,23 +24,23 @@ class PayPalClient
         $this->client = PaypalServerSdkClientBuilder::init()
             ->clientCredentialsAuthCredentials(
                 ClientCredentialsAuthCredentialsBuilder::init(Env::get('PAYPAL_CLIENTID'), Env::get('PAYPAL_SECRET'))
-                ->oAuthOnTokenUpdate(function(OAuthToken $oAuthToken){
-                    try{
-                        $token = PaypalToken::get(1);
-                    } catch (\Exception $e) {
-                        $token = new PaypalToken();
-                    }
-                    $token->token = '=' . $oAuthToken->getAccessToken();
+                    ->oAuthOnTokenUpdate(function (OAuthToken $oAuthToken) {
+                        try {
+                            $token = PaypalToken::get(1);
+                        } catch (\Exception $e) {
+                            $token = new PaypalToken();
+                        }
+                        $token->token = '=' . $oAuthToken->getAccessToken();
 
-                })
-                ->oAuthTokenProvider(function (?OAuthToken $oAuthToken, ClientCredentialsAuthManager $authManager) {
-                    try{
-                        $token = PaypalToken::get(1);
-                        return $token->token;
-                    } catch (\Exception $e) {
-                        return $authManager->fetchToken();
-                    }
-                })
+                    })
+                    ->oAuthTokenProvider(function (?OAuthToken $oAuthToken, ClientCredentialsAuthManager $authManager) {
+                        try {
+                            $token = PaypalToken::get(1);
+                            return $token->token;
+                        } catch (\Exception $e) {
+                            return $authManager->fetchToken();
+                        }
+                    })
             )
             ->environment(Env::get('PAYPAL_ENVIRONMENT') === 'SANDBOX' ? Environment::SANDBOX : Environment::PRODUCTION)
             ->loggingConfiguration(
@@ -50,5 +50,9 @@ class PayPalClient
                     ->responseConfiguration(ResponseLoggingConfigurationBuilder::init()->headers(true))
             )
             ->build();
+    }
+    public function subscriptionController()
+    {
+        return $this->client->getSubscriptionsController();
     }
 }

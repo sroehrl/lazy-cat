@@ -2,7 +2,7 @@ import serverApi from "$lib/serverApi";
 import paypalApi from "$lib/utils/paypalApi";
 
 export const load = async ({ cookies, params }) => {
-    const api = serverApi(cookies)
+    const api = serverApi(cookies.get('token'))
     const allPlans = await api.get('/plans?pageSize=100&orderBy=pricePerMonth')
     await paypalApi.auth()
     return {
