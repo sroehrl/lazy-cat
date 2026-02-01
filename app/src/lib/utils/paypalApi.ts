@@ -1,10 +1,11 @@
-import { PRIVATE_PAYPAL_CLIENTID, PRIVATE_PAYPAL_SECRET } from "$env/static/private";
+import { PRIVATE_PAYPAL_SECRET } from "$env/static/private";
+import { PUBLIC_PAYPAL_CLIENTID } from "$env/static/public";
 import type { SubscriptionPlan } from "$lib/_types/SubscriptionPlan";
+import { PUBLIC_PAYPAL_MODE_SANDBOX } from "$env/static/public";
+const call = async (method: string, url: string, postData: any | null | undefined = null, version: 'v1' | 'v2' | 'v3' = 'v3') => {
 
-const call = async (method: string, url: string, postData: any | null | undefined = null) => {
-
-    let options = {
-        method,
+    let options: any = {
+        method: method.toUpperCase(),
         headers: {
             'Authorization': 'bearer ' + PayPalApi.token,
             'Content-Type': 'application/json',
@@ -14,15 +15,16 @@ const call = async (method: string, url: string, postData: any | null | undefine
     if (postData) {
         options.body = JSON.stringify(postData)
     }
-    const call = await fetch('https://api-m.sandbox.paypal.com/v1' + url, options)
+    const call = await fetch(`https://api-m.${PUBLIC_PAYPAL_MODE_SANDBOX ? "sandbox." : ""}paypal.com/${version}${url}`, options)
     if (call.status >= 200 && call.status <= 299) {
         return await call.json();
     } else {
-        throw Error(call.statusText)
+        const error = await call.json();
+        console.error('PayPal API Error:', error);
+        throw Error(error.message || call.statusText)
     }
 
 }
-
 const productId = (plan: SubscriptionPlan) => "cc-prod-" + plan.id + "-" + plan.createdAt.stamp;
 
 const createProduct = async (plan: SubscriptionPlan) => {
@@ -80,18 +82,6 @@ const createPlan = async (plan: SubscriptionPlan) => {
     }
 }
 
-// export const deleteSubscriptionPlan = async (productId: number) => {
-//     try {
-//         const plans = await PayPalApi.get('/billing/plans?page_size=20');
-//         if (plans.length) {
-//             plans.plans.find(plan => plan.product_id.startsWith(productId));
-//             await PayPalApi.post('/billing/plans/' + plans[0].id + '/deactivate');
-//         }
-//     } catch (e) {
-//         return null;
-//     }
-// }
-
 export const subscriptionPlanSync = async (plan: SubscriptionPlan) => {
     await PayPalApi.auth();
     // check if product exitst
@@ -140,10 +130,6 @@ export const subscriptionPlanSync = async (plan: SubscriptionPlan) => {
             }]
         })
     }
-
-
-
-
 }
 
 const PayPalApi = {
@@ -154,21 +140,52 @@ const PayPalApi = {
         if (now < PayPalApi.expires) {
             return;
         }
-        const call = await fetch('https://api-m.sandbox.paypal.com/v1/oauth2/token?grant_type=client_credentials', {
+        const call = await fetch(`https://api-m.${PUBLIC_PAYPAL_MODE_SANDBOX ? "sandbox." : ""}paypal.com/v1/oauth2/token?grant_type=client_credentials`, {
             method: 'POST',
             headers: {
-                ContentType: 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 Accept: 'application/json',
-                Authorization: 'Basic ' + btoa(PRIVATE_PAYPAL_CLIENTID + ':' + PRIVATE_PAYPAL_SECRET)
+                Authorization: 'Basic ' + btoa(PUBLIC_PAYPAL_CLIENTID + ':' + PRIVATE_PAYPAL_SECRET)
             }
         })
         const tokenData = await call.json();
-        console.log({ tokenData })
         PayPalApi.token = tokenData.access_token;
         PayPalApi.expires = now + tokenData.expires_in * 1000;
     },
-    get: async (url: string) => call('get', url),
-    patch: async (url: string, payload: any) => call('patch', url, payload),
-    post: async (url: string, payload: any) => call('post', url, payload),
+    get: async (url: string, version: 'v1' | 'v2' | 'v3' = 'v1') => call('get', url, null, version),
+    patch: async (url: string, payload: any, version: 'v1' | 'v2' | 'v3' = 'v1') => call('patch', url, payload, version),
+    post: async (url: string, payload: any, version: 'v1' | 'v2' | 'v3' = 'v1') => call('post', url, payload, version),
+
+    // Vaulting V3
+    createSetupToken: async (paymentSource: 'CARD' | 'PAYPAL' | 'VENMO' | null = null, customerId: string) => {
+        let payload: any = {
+            payment_source: {}
+        };
+        if (paymentSource) {
+            payload.payment_source[paymentSource.toLowerCase()] = {};
+        } else {
+            payload.payment_source.paypal = {
+                description: 'Lazy Cat Cafe wants to save your paypal account for future payments. You can remove it anytime in your account settings.',
+                usage_pattern: 'IMMEDIATE',
+                usage_type: 'MERCHANT',
+                customer_type: 'CONSUMER'
+            };
+
+        }
+        payload.customer = {
+            merchant_customer_id: customerId
+        };
+        return PayPalApi.post('/vault/setup-tokens', payload, 'v3');
+    },
+    createPaymentToken: async (setupToken: string) => {
+        return PayPalApi.post('/vault/payment-tokens', {
+            payment_source: {
+                token: {
+                    id: setupToken,
+                    type: 'SETUP_TOKEN'
+                }
+            }
+        }, 'v3');
+    }
 }
 export default PayPalApi

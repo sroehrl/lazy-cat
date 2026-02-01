@@ -113,7 +113,7 @@
                     <DropdownItem href="/member">Member page</DropdownItem>
                     <DropdownDivider />
                     <DropdownItem
-                        ><form method="post" action="?/signOut">
+                        ><form method="post" action="/?/signOut">
                             <button type="submit">Sign out</button>
                         </form></DropdownItem
                     >

@@ -14,6 +14,7 @@
         ClipboardListSolid,
         UserCircleSolid,
         CalendarMonthSolid,
+        CreditCardSolid,
     } from "flowbite-svelte-icons";
 
     export let data;
@@ -74,6 +75,17 @@
                     </svelte:fragment>
                 </SidebarItem>
                 <SidebarItem
+                    href="/member/payment-methods"
+                    label="Payment Methods"
+                    active={$page.url.pathname === "/member/payment-methods"}
+                >
+                    <svelte:fragment slot="icon">
+                        <CreditCardSolid
+                            class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        />
+                    </svelte:fragment>
+                </SidebarItem>
+                <SidebarItem
                     href="/member/account"
                     label="Account"
                     active={$page.url.pathname === "/member/account"}
@@ -112,7 +124,7 @@
     <BottomNav
         position="fixed"
         classOuter="md:hidden z-50 bg-white border-t border-gray-200 dark:bg-neutral-900 dark:border-neutral-800"
-        classInner="grid-cols-5"
+        classInner="grid-cols-6"
         activeClass="text-primary-700 dark:text-primary-600"
     >
         <BottomNavItem href="/member" btnName="Dashboard">
@@ -126,6 +138,9 @@
         </BottomNavItem>
         <BottomNavItem href="/member/paws" btnName="Paws">
             <CashSolid class="w-6 h-6 mb-1 dark:text-white" />
+        </BottomNavItem>
+        <BottomNavItem href="/member/payment-methods" btnName="Payments">
+            <CreditCardSolid class="w-6 h-6 mb-1 dark:text-white" />
         </BottomNavItem>
         <BottomNavItem href="/member/account" btnName="Account">
             <UserCircleSolid class="w-6 h-6 mb-1 dark:text-white" />

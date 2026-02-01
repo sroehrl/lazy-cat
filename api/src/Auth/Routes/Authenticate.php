@@ -18,6 +18,6 @@ class Authenticate implements Routable
     {
 
         $user = User::login($request->email, $request->password);
-        return [...GenerateJWT::generate($user), 'admin' => $user->isAdmin];
+        return [...GenerateJWT::generate($user), 'admin' => $user->isAdmin ?? false];
     }
 }
