@@ -53,6 +53,17 @@
       <path value="$PROJECT_DIR$/api/vendor/apimatic/core" />
       <path value="$PROJECT_DIR$/api/vendor/apimatic/unirest-php" />
       <path value="$PROJECT_DIR$/api/vendor/apimatic/jsonmapper" />
+      <path value="$PROJECT_DIR$/api/vendor/mailjet/mailjet-apiv3-php" />
+      <path value="$PROJECT_DIR$/api/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/api/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/api/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/api/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/validator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

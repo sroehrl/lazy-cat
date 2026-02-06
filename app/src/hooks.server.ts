@@ -4,5 +4,8 @@ export const handle = async ({ event, resolve }) => {
     if (dev && event.url.pathname === '/.well-known/appspecific/com.chrome.devtools.json') {
         return new Response(null, { status: 404 });
     }
-    return resolve(event);
-};   
+
+    const response = await resolve(event);
+
+    return response;
+};

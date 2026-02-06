@@ -8,13 +8,13 @@ export const actions = {
         const data = await api.captureFormData(request);
         try {
             const login = await api.post('/auth/authenticate', data)
+            console.log({ login })
             cookies.set('token', login.token, { path: '/', sameSite: 'lax', maxAge: 60 * 60 * 24 * 30 });
-            cookies.set('isAdmin', login.isAdmin, { path: '/', sameSite: 'lax', maxAge: 60 * 60 * 24 * 30 });
+            cookies.set('isAdmin', login.admin, { path: '/', sameSite: 'lax', maxAge: 60 * 60 * 24 * 30 });
 
         } catch (e) {
             return fail(400, { email: data.email, error: true })
         }
-        redirect(303, data.redirect);
-        return { error: false }
+        throw redirect(307, data.redirect);
     }
 } satisfies Actions;

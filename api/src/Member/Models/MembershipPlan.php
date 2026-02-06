@@ -36,6 +36,9 @@ class MembershipPlan extends Model
 
     public int $pawsPerMonth = 1;
 
+    public ?string $whopProductId = null;
+    public ?string $whopPlanId = null;
+
 
     use TimeStamps;
 

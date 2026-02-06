@@ -34,13 +34,17 @@
     import { order } from "$lib/stores/order";
     import { toastStore } from "$lib/utils/toast";
     import { user } from "$lib/stores/user";
+    import { onMount } from "svelte";
 
     export let data;
 
-    if (data.token) {
-        $token = data.token;
-        $user = data.user;
-    }
+    onMount(() => {
+        if (data.token) {
+            $token = data.token;
+            $user = data.user;
+        }
+        console.log({ data });
+    });
 </script>
 
 <Toast

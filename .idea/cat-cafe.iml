@@ -48,6 +48,17 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/apimatic/unirest-php" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/paypal/paypal-server-sdk" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/php-jsonpointer/php-jsonpointer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/mailjet/mailjet-apiv3-php" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/validator" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
